@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style type="text/css">
+        .clearfix::after {
+            display: block;
+            clear: both;
+            content: "";
+        }
+
+        .parent {
+            width: 600px;
+            border: 1px solid red;
+        }
+
+        #box1 {
+            float: left;
+            width: 150px;
+            background-color: green;
+        }
+
+        #box2 {
+            float: right;
+            width: 150px;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+
+    <pre>
+        Yêu câu cho box1 và box2 có độ rộng là 150px
+        thẻ .parent có độ rộng bằng 600px
+        hay căn thẻ box1 về bên trái
+        và căn thẻ box2 về bên phải của parent
+        cho .parent 1 border là 1px solid red để quan sát
+        Sử dụng kỹ thuật float trong css
+    </pre>
+
+    <div class="parent clearfix">
+        <div id="box1">Left</div>
+        <div id="box2">Right</div>
+    </div>
+
+</body>
+</html>

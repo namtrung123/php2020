@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <pre>
+        lấy ra độ dài của 1 mảng
+    </pre>
+
+    <script type="text/javascript">
+        var cities1 = ['hà nội', 'hồ chí minh', 'đà nẵng'];
+
+        // in ra độ dài của mảng
+        console.log(cities1.length);
+
+
+        // phép lặp
+        // hành động lặp lại theo 1 chu kỳ nhưng mà có điểm dừng
+        // vòng lặp for chạy bắt đầu từ 1
+        // với điều kiện i <=10
+        // mỗi 1 lần chạy i tăng thêm 1 đơn vị
+        for(var i = 1; i <= 10; i++) {
+            console.log('lần chay ' + i );
+        }
+
+        // dùng vòng lặp for in ra các số chẵn từ 1 đến 20
+        for(var j = 0; j <= 20; j = j+2) {
+            console.log('biến j : ' + j);
+        }
+
+        for(var t = 0; t <= 20; t++) {
+            if ( (t%2) == 0) {
+                console.log('biến t : ' + t);
+            }
+
+        }
+
+        // dùng vòng lặp for in ra các số chia hết cho 5 bắt đầu từ 1 đến 20
+
+
+        // dùng lặp for in ra các phần tử trong mảng
+        // chỉ số trong mảng bắt đầu từ 0
+        for(var n = 0; n < cities1.length; n++) {
+            console.log('chỉ số ' + n + ' có giá trị là : ' + cities1[n]);
+        }
+
+    </script>
+</body>
+</html>

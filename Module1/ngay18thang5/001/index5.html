@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style type="text/css">
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .container {
+            width: 800px;
+            height: 800px;
+            border: 1px solid darkslategray;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .container .zone {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            box-sizing: border-box;
+            background-color: #ae7e35;
+        }
+    </style>
+</head>
+<body>
+
+    <pre>
+        Sử dụng vòng lặp tạo ra 1 bàn cờ vua
+        kết hợp với kiến thức về css position absolute và relative
+    </pre>
+
+
+    <div id="bancovua" class="container">
+
+    </div>
+
+    <script type="text/javascript">
+
+        var html = '';
+        var left = 0;
+        var topcss = 0;
+        var bg = 'white';
+        var row = 0;
+        for(var i = 1; i <= 64; i++) {
+
+            console.log(topcss);
+            if (row % 2 == 1) {
+                // hàng lẻ
+                if (i % 2 == 1) {
+                    // ô lẻ màu trắng
+                    bg = 'white';
+                } else {
+                    // ô chẵn màu xanh
+                    bg = 'green';
+                }
+            } else {
+                // hàng chẵn
+                if (i % 2 == 1) {
+                    // ổ lẻ màu xanh
+                    bg = 'green';
+                } else {
+                    // ô chẵn màu trắng
+                    bg = 'white';
+                }
+            }
+
+            html = html + '<div class="zone" style="background-color: '+bg+'; top: '+topcss+'px; left: '+left+'px">'+i+'</div>';
+            left = left + 100;
+            if ((i % 8) == 0) {
+
+                // mỗi hàng mới reset left về 0
+                left = 0;
+                // tăng topcss thêm 100 đơn vị
+                topcss = topcss + 100;
+                // tăng số hàng thêm 1 đơn vị
+                row++;
+            }
+        }
+        document.getElementById('bancovua').innerHTML = html;
+    </script>
+
+</body>
+</html>
